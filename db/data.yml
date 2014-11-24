@@ -1,0 +1,101 @@
+
+---
+artriver_users:
+  columns:
+  - id
+  - name
+  - email
+  - password
+  - created_at
+  - updated_at
+  - password_digest
+  records: 
+  - - 6
+    - moi
+    - moi
+    - moi
+    - 2014-11-24 10:57:30.000000000 Z
+    - 2014-11-24 10:57:30.000000000 Z
+    - 
+  - - 7
+    - dzd
+    - dzada
+    - 
+    - 2014-11-24 14:29:57.000000000 Z
+    - 2014-11-24 14:29:57.000000000 Z
+    - $2a$10$Qts5ehFAuoYaHGiNds81/./TlAezlLv/f/Y5Mi5OTpNCSptrg.7He
+  - - 8
+    - michel
+    - test
+    - 
+    - 2014-11-24 14:30:32.000000000 Z
+    - 2014-11-24 14:30:32.000000000 Z
+    - $2a$10$bvCecmHTDPfTf71s7MC8EepG1MWiGHB7VMzXH4Ie05P8F6kznaAJC
+  - - 9
+    - test
+    - test
+    - 
+    - 2014-11-24 15:32:53.000000000 Z
+    - 2014-11-24 15:32:53.000000000 Z
+    - $2a$10$17kTejM7wawxGqp884LjHeVpr.x8kjZ.LN3kEihDa8bAOKdPp2y6G
+
+---
+artworks:
+  columns:
+  - id
+  - name
+  - artriver_user_id
+  - subject_id
+  - created_at
+  - updated_at
+  records: 
+  - - 66
+    - michel
+    - 1
+    - 
+    - 2014-11-20 11:38:56.000000000 Z
+    - 2014-11-22 22:12:32.000000000 Z
+  - - 67
+    - test2
+    - 
+    - 
+    - 2014-11-20 11:52:17.000000000 Z
+    - 2014-11-20 11:52:17.000000000 Z
+  - - 68
+    - test
+    - 
+    - 
+    - 2014-11-20 11:52:55.000000000 Z
+    - 2014-11-20 11:52:55.000000000 Z
+  - - 69
+    - test
+    - 
+    - 
+    - 2014-11-20 11:53:09.000000000 Z
+    - 2014-11-20 11:53:09.000000000 Z
+  - - 72
+    - test3avec michel
+    - 
+    - 
+    - 2014-11-20 14:48:22.000000000 Z
+    - 2014-11-20 14:48:22.000000000 Z
+
+---
+subjects:
+  columns:
+  - id
+  - name
+  - description
+  - created_at
+  - updated_at
+  records: 
+  - - 2
+    - aucun
+    - les sujet est grave messieurs
+    - 2014-11-24 11:46:33.000000000 Z
+    - 2014-11-24 11:46:45.000000000 Z
+  - - 4
+    - michel
+    - tatouine
+    - 2014-11-24 12:06:53.000000000 Z
+    - 2014-11-24 12:06:53.000000000 Z
