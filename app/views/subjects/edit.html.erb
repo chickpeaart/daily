@@ -1,0 +1,10 @@
+<h1>Subjects#edit</h1>
+<p>Find me in app/views/subjects/edit.html.erb</p>
+
+<%= form_for(:subject, :url =>{:action =>'update', :id => @subject.id}) do |f|%>
+
+<%=render(:partial =>'formulaire_partial',:locals =>{:f=>f})%>
+
+<%= f.submit(:update)%>
+<%end%>
+

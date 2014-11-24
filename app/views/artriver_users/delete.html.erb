@@ -1,0 +1,20 @@
+<h1>ArtriverUsers#delete</h1>
+<p>Find me in app/views/artriver_users/delete.html.erb</p>
+
+<p>voulez vous vraiment supprimer l'utilisateur suivant</p>
+<table>
+
+<tr>
+<th>name</th>
+<th>email</th>
+</tr>
+<tr>
+<td><%=@user.name%></td>
+<td><%=@user.email%></td>
+</tr>
+</table>
+<%= form_for(:user, :url =>{:action =>'destroy', :id => @user.id}) do |f|%>
+<%= f.submit(:supprimer)%>
+<%end%>
+
+

@@ -1,0 +1,6 @@
+<h1>Artworks#edit</h1>
+<p>Find me in app/views/artworks/edit.html.erb</p>
+<%= form_for(:artwork, :url =>{:action =>'update',:id=> @artwork.id}) do |f|%>
+<%=f.text_field(:name)%>
+<%= f.submit(:envoyer)%>
+<%end%>

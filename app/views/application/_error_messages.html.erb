@@ -1,0 +1,23 @@
+<%
+=begin
+ici nous avons crée un partial qui va nous permettre de d'afficher les message d'erreurs sans le retapper
+a chaque fois.  
+cf model pour voir le champs qui controlé.  
+=end
+%>
+<%if object && object.errors.size > 0%>
+
+<div id="explication d'erreur">
+	<h2><%=pluralize(object.errors.size,'erreur')%></h2>
+	<p> ce formulaire n'est pas valide</p>
+	<p>Nous n'avons pas pu valider les informations suivantes</p>
+	<ul>
+			<%object.errors.full_messages.each do |msg|%>
+			<li><%=msg%></li>
+
+			<% end -%>
+	</ul>
+
+
+</div>
+<% end -%>

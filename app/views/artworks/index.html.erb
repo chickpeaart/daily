@@ -1,0 +1,33 @@
+<h1>Artworks#index</h1>
+
+<br/>
+
+<% if !flash[:notice].blank? %>
+<div class "notive">
+  <%= flash[:notice]%>
+</div>
+<%end%>
+
+<p><%= link_to('create a new artwork', {:action=> 'new'}) %></p>
+
+<table>
+<tr>
+<th>name</th>
+<th>id</th>
+<th>editer</th>
+<th>supprimer</th>
+</tr>
+<%@artwork.each do |a|%>
+<tr>
+<td><%=a.name%></td>
+<td><%=a.id%></td>
+<td><%= link_to "editer", :action => "edit" ,:id=> a.id %></td>
+<td><%= link_to "supprimer", :action => "delete" ,:id=> a.id %></td>
+<td><%= link_to "voir", :action => "show" ,:id=> a.id %></td>
+</tr>
+<tr>
+
+</tr>
+<%end%>
+</table>
+

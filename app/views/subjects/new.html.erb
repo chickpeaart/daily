@@ -1,0 +1,14 @@
+
+
+<!--message d'erreur du helper customisé pour les renvoie d'erreur sur le champs name -->
+
+<%=error_message_for(@subject)%>
+
+<h1>Subjects#new</h1>
+<p>Find me in app/views/subjects/new.html.erb</p>
+<%= form_for(:subject, :url =>{:action =>'create'}) do |f|%>
+<%=render(:partial =>'formulaire_partial',:locals =>{:f=>f})%>
+<br><br>
+<%= f.submit(:créer)%>
+<%end%>
+

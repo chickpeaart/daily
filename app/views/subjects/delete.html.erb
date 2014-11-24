@@ -1,0 +1,21 @@
+<h1>Subjects#delete</h1>
+<p>Find me in app/views/subjects/delete.html.erb</p>
+
+
+<p>voulez vous supprimer ce sujet ?</p>
+<table>
+<tr>
+<th>name</th>
+<th>name</th>
+</tr>
+<tr>
+
+<td><%=@subject.name%></td>
+<td><%=@subject.description%></td>
+</tr>
+</table>
+
+<%= form_for(:subject, :url =>{:action =>'destroy',:id =>@subject.id}) do |f|%>
+<%= f.submit(:supprimer)%>
+<%end%>
+

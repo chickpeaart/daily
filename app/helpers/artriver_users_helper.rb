@@ -1,0 +1,2 @@
+module ArtriverUsersHelper
+end

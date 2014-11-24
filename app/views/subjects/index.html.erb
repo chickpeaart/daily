@@ -1,0 +1,22 @@
+<h1>ma page index de subjects</h1>
+
+
+<table>
+<tr>
+<th>name</th>
+<th>subject</th>
+
+<%= link_to "new", :action => "new" %>
+
+</tr>
+
+<%@subject.each do |a|%>
+<tr>
+<td><%=a.name%></td>
+<td><%=a.description%></td>
+<td><%= link_to "show", :action => "show", :id => a.id %></td>
+<td><%= link_to "edit", :action => "edit", :id => a.id %></td>
+<td><%= link_to "delete", :action => "delete", :id => a.id %></td>
+</tr>
+<% end -%>
+</table>

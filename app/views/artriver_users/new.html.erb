@@ -1,0 +1,9 @@
+<h1>ArtriverUsers#new</h1>
+<p>Find me in app/views/artriver_users/new.html.erb</p>
+
+
+<%= form_for(:user, :url =>{:action=>'create'}) do |f| %>
+ <%=render(:partial =>'partial_artriver_users',:locals =>{:f=>f})%>
+<%=f.submit(:envoyer)%>
+  
+<% end %>

@@ -1,0 +1,17 @@
+
+
+
+
+<h1>Artworks#new</h1>
+<p>Find me in app/views/artworks/new.html.erb</p>
+
+
+<%= form_for(:artwork, :url =>{:action =>'create'}) do |f|%>
+<%=f.text_field(:name)%>
+<%= f.submit(:envoyer)%>
+<%end%>
+
+
+
+
+
