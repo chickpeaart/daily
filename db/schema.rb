@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124142135) do
+ActiveRecord::Schema.define(version: 20141126155601) do
 
   create_table "artriver_users", force: true do |t|
     t.string   "name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20141124142135) do
     t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   add_index "artworks", ["artriver_user_id"], name: "index_artworks_on_user_id", using: :btree
