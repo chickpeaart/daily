@@ -1,12 +1,15 @@
 class ArtworksController < ApplicationController
   before_action :connected_user, :except =>[:login,:tentative_log,:logout]
+  before_action :list_artworks
 
-  def index
-    @artwork = Artwork.order("name")
+    def index
     
+          #@artwork = Artwork.order("name")
+
+          @artwork=@subject.artworks.order("name") 
+
       
-      
-  end
+    end
 
 
   
@@ -17,7 +20,7 @@ class ArtworksController < ApplicationController
   end
 
   def new
-    @artwork = Artwork.new
+    @artwork = Artwork.new({:subject_id => @subject.id})
   end
   
 
@@ -31,8 +34,8 @@ class ArtworksController < ApplicationController
 
       @artwork=Artwork.find(params[:id])
     
-        if @artwork.update_attributes(params.require(:artwork).permit(:name))
-          redirect_to(:action=>'index')
+        if @artwork.update_attributes(params.require(:artwork).permit(:name,:subject_id))
+          redirect_to(:action=>'index',:subject_id => @subject.id)
           flash[:notice] ='enregistré'
 
           else
@@ -52,7 +55,7 @@ class ArtworksController < ApplicationController
 
     if @artwork.destroy
       flash[:notice] ="détruit"
-    redirect_to(:action=>"index")
+    redirect_to(:action=>"index",:subject_id => @subject.id)
     else 
     render('delete')    
     end
@@ -64,14 +67,26 @@ class ArtworksController < ApplicationController
   def create
 
 
-      @artwork = Artwork.new(params.require(:artwork).permit(:name))
+      @artwork = Artwork.new(params.require(:artwork).permit(:name,:subject_id))
     
         if @artwork.save
-        redirect_to(:action=>'index')
+        redirect_to(:action=>'index',:subject_id => @subject.id)
         flash[:notice] ='crée'
 
         else
         render ('new')
       end
     end
+
+    private
+    def list_artworks
+      if params[:subject_id]
+        @subject= Subject.find(params[:subject_id])
+      end
+      
+    end
+
+
+
+
   end

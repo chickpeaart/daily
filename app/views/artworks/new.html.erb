@@ -6,8 +6,12 @@
 <p>Find me in app/views/artworks/new.html.erb</p>
 
 
-<%= form_for(:artwork, :url =>{:action =>'create'}) do |f|%>
+<%= form_for(:artwork, :url =>{:action =>'create',:subject_id => @subject.id}) do |f|%>
+
+<%= f.label(:name, "Name") %>
 <%=f.text_field(:name)%>
+<br>
+<%=f.hidden_field(:subject_id)%>
 <%= f.submit(:envoyer)%>
 <%end%>
 

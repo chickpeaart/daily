@@ -3,3 +3,4 @@
 <br>
 <%= f.label :description, "Description" %>
 <%=f.text_field(:description)%>
+

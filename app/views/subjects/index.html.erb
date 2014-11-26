@@ -17,6 +17,7 @@
 <td><%= link_to "show", :action => "show", :id => a.id %></td>
 <td><%= link_to "edit", :action => "edit", :id => a.id %></td>
 <td><%= link_to "delete", :action => "delete", :id => a.id %></td>
+<td><%= link_to "voir les artworks",{ :controller=>'artworks',:action => "index",:subject_id => a.id} %></td>
 </tr>
 <% end -%>
 </table>

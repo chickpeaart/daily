@@ -1,7 +1,8 @@
 <h1>Artworks#delete</h1>
 <p>Find me in app/views/artworks/delete.html.erb</p>
-<%= form_for(:artwork, :url =>{:action =>'destroy',:id=> @artwork.id}) do |f|%>
+<%= form_for(:artwork, :url =>{:action =>'destroy',:id=> @artwork.id,:subject_id => @subject.id}) do |f|%>
 <p>tu veux vraiment effacer ? </p>
 	<p><%=@artwork.name%></p>
+	<%=f.hidden_field(:subject_id)%>
 <%= f.submit(:envoyer)%>
 <%end%>

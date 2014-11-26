@@ -1,4 +1,3 @@
-<h1>Artworks#index</h1>
 
 <br/>
 
@@ -8,25 +7,25 @@
 </div>
 <%end%>
 
-<p><%= link_to('create a new artwork', {:action=> 'new'}) %></p>
+<p><%= link_to('Participe au défis!', {:action=> 'new', :subject_id => @subject.id}) %></p>
 
 <table>
 <tr>
-<th>name</th>
-<th>id</th>
-<th>editer</th>
-<th>supprimer</th>
+<th>Theme du jour</th>
+
 </tr>
 <%@artwork.each do |a|%>
 <tr>
-<td><%=a.name%></td>
-<td><%=a.id%></td>
-<td><%= link_to "editer", :action => "edit" ,:id=> a.id %></td>
-<td><%= link_to "supprimer", :action => "delete" ,:id=> a.id %></td>
-<td><%= link_to "voir", :action => "show" ,:id=> a.id %></td>
+	<th>name</th>
+	<th>actions</th>
+
+
 </tr>
 <tr>
-
+	<td><%=a.name%></td>
+<td colspan='3'><%= link_to "voir", :action => "show" ,:id=> a.id,:subject_id=>a.subject_id %>
+<%= link_to "editer", :action => "edit" ,:id=> a.id,:subject_id=>a.subject_id %>
+<%= link_to "delete", :action => "delete" ,:id=> a.id,:subject_id=>a.subject_id %></td>
 </tr>
 <%end%>
 </table>
