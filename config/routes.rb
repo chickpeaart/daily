@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'public/show'
 
- root 'access#index'
+root 'public#show'
+#root 'access#index' pour passer directement par l'admin
+
  get 'access/admin', :to =>"access#index"
 
   

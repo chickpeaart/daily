@@ -39,3 +39,5 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'yaml_db'
+#gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'carrierwave'

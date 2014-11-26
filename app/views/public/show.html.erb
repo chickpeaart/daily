@@ -1,2 +1,35 @@
 <h1>Public#show</h1>
 <p>Find me in app/views/public/show.html.erb</p>
+
+<table>
+
+<tr><th>name</th></tr>
+
+<%@artwork.each do |a|%>
+<tr>
+	<td><span>Paint name: </span><%=a.name%></td>
+	
+</tr>
+<tr><td><%@user.each do  |u|  %>
+		<% if u.id == a.artriver_user_id%>
+		<span>Auteur: </span><%=u.name%>
+		<% end -%>
+		
+	</td></tr>
+
+<tr>
+<td>
+	<%=image_tag @artwork_image.find_by_artriver_user_id(a.artriver_user_id).image.url.to_s%>
+
+	
+
+
+
+</td>
+
+</tr>
+
+<%end%>
+<% end -%>
+
+</table>

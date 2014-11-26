@@ -34,7 +34,7 @@ class ArtworksController < ApplicationController
 
       @artwork=Artwork.find(params[:id])
     
-        if @artwork.update_attributes(params.require(:artwork).permit(:name,:subject_id))
+        if @artwork.update_attributes(params.require(:artwork).permit(:name,:subject_id,:image))
           redirect_to(:action=>'index',:subject_id => @subject.id)
           flash[:notice] ='enregistré'
 
@@ -67,7 +67,7 @@ class ArtworksController < ApplicationController
   def create
 
 
-      @artwork = Artwork.new(params.require(:artwork).permit(:name,:subject_id))
+      @artwork = Artwork.new(params.require(:artwork).permit(:name,:subject_id,:image))
     
         if @artwork.save
         redirect_to(:action=>'index',:subject_id => @subject.id)
