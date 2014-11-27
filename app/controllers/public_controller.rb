@@ -5,8 +5,7 @@ class PublicController < ApplicationController
 
   def show
   	@artwork = Artwork.order("name")
-  	@user= ArtriverUser.order('name')
-  	@artwork_image=Artwork.order('name')
+  	
 
 
   end

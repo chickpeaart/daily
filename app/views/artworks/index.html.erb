@@ -14,15 +14,20 @@
 <th>Theme du jour</th>
 
 </tr>
-<%@artwork.each do |a|%>
+
 <tr>
 	<th>name</th>
+	<th>Image</th>
 	<th>actions</th>
 
 
 </tr>
+<%@artwork.each do |a|%>
 <tr>
 	<td><%=a.name%></td>
+	<td><%=image_tag a.image.url(:thumb).to_s%></td>
+	
+
 <td colspan='3'><%= link_to "voir", :action => "show" ,:id=> a.id,:subject_id=>a.subject_id %>
 <%= link_to "editer", :action => "edit" ,:id=> a.id,:subject_id=>a.subject_id %>
 <%= link_to "delete", :action => "delete" ,:id=> a.id,:subject_id=>a.subject_id %></td>

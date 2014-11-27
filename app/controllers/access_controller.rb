@@ -18,20 +18,26 @@ class AccessController < ApplicationController
 	if user
 		authorized_user =user.authenticate(params[:password])
 	end
+	
+
+
 	if authorized_user 
 
 		#on crée des variables de session pour conserver user id et name
 		session[:user_name] = authorized_user.name
 		session[:user_id] = authorized_user.id
-
+		session[:user_admin] = authorized_user.user_admin
 		#ajouter la notif
-		redirect_to(:action=>'admin')
+		if session[:user_admin] == true
+
+		redirect_to(:action=>'index')
+		else 
+		#ajouter la notif
+		redirect_to(:action=>'index_user')
+		end
 	else 
-		#ajouter la notif
-		redirect_to(:action=>'login')
+		redirect_to(:controller =>'public',:action=>'show')
 	end
-
-
 
 
   end
@@ -49,6 +55,8 @@ class AccessController < ApplicationController
   	
   end
 
+  def index_user
+  end
 
 
 end

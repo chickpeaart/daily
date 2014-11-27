@@ -1,13 +1,18 @@
 class ArtworksController < ApplicationController
   before_action :connected_user, :except =>[:login,:tentative_log,:logout]
   before_action :list_artworks
+  before_action :my_artwork
 
     def index
     
           #@artwork = Artwork.order("name")
-
+          if session[:user_admin] == true
           @artwork=@subject.artworks.order("name") 
-
+        else
+        @myartwork=@user.artworks
+        redirect_to(:action=>'show', :id => @myartwork.id)
+        
+        end
       
     end
 
@@ -83,6 +88,15 @@ class ArtworksController < ApplicationController
       if params[:subject_id]
         @subject= Subject.find(params[:subject_id])
       end
+      
+    end
+
+    private
+    def my_artwork
+      #if params[:artriver_user_id]
+      @user=ArtriverUser.find(session[:user_id])
+      #end 
+
       
     end
 
