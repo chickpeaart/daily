@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126155601) do
+ActiveRecord::Schema.define(version: 20141127142135) do
 
   create_table "artriver_users", force: true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20141126155601) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.boolean  "user_admin"
   end
 
   create_table "artworks", force: true do |t|

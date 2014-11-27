@@ -1,0 +1,18 @@
+
+<p>index_user</p>
+
+
+<h1>page de l'admin</h1>
+
+<p>hello <%=session[:user_name]%></p>
+<ul>
+<li><%= link_to "ajouter/modifier", {:controller => "artworks",:artriver_user_id => session[:user_id] }%></li>	
+<!--#remplacé session[:user_id] par :id-->
+
+
+
+<li><%= link_to "Mon profil", :controller => "artriver_users"%></li>
+<li><%= link_to "logout", :action => "logout"%></li>
+</ul>
+<p><%=session[:user_id]%></p>
+
