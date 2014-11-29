@@ -1,25 +1,29 @@
-<table>
-
-
 
 <%@artwork.each do |a|%>
+<div class="artwork">
+<table class="table_artwork" >
+
+
+
+
+
 <tr>
-	<td><span>Paint name: </span><%=a.name%></td>
-		
-		
-</tr>
-<tr>
-<td><span>Pseudo: </span><%=a.artriver_user.name%></td>
+<td><span>Speed paint proposé par: </span><%=a.artriver_user.name%></td>
 </tr>
 <tr>
 <td><%=image_tag a.image.url(:thumb).to_s%></td>
 </tr>
+<tr><td><span>Votez :</span><span><%= link_to "Up", :controller => 'artworks' ,:action => "vote_up" ,:id => a.id %></span></td></tr>
+<!-- j'ai viré le down <span><%= link_to "Down", :controller => 'artworks', :action => "vote_down" ,:id => a.id%></span>-->
 
-<% end -%>
+<tr><td>Score : <%=a.position%></td></tr>
 
-</tr>
+<tr><td><%=flash[:voted]%></td></tr>
 
 
 
 
 </table>
+</div>
+<% end -%>
+

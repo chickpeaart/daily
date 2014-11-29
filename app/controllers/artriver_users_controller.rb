@@ -1,5 +1,6 @@
 class ArtriverUsersController < ApplicationController
-  before_action :connected_user, :except =>[:login,:tentative_log,:logout]
+  before_action :connected_user, :except =>[:login,:tentative_log,:logout,:new]
+
   def new
     @user=ArtriverUser.new
   end
@@ -80,6 +81,12 @@ class ArtriverUsersController < ApplicationController
   end
 
 
+  
+
+
+
+
+    
   
   
  

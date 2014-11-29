@@ -56,6 +56,8 @@ class AccessController < ApplicationController
   end
 
   def index_user
+  	@subject=Subject.order('name')
+
   end
 
 

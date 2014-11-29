@@ -1,20 +1,14 @@
-
-
-
-
-<h1>Artworks#new</h1>
-<p>Find me in app/views/artworks/new.html.erb</p>
-
-
-<%= form_for(:artwork, :url =>{:action =>'create',:subject_id => @subject.id},:html => {:multipart => true}) do |f|%>
+<%= form_for(:artwork, :url =>{:action =>'create',:subject_id => @subject.id,:artriver_user_id =>@user.id},:html => {:multipart => true}) do |f|%>
 
 <%= f.label(:name, "Name") %>
 <%=f.text_field(:name)%>
 <br>
 <%=f.hidden_field(:subject_id)%>
-<p>Ajouter une image</p>
+<%=f.hidden_field(:artriver_user_id)%>
 <%=f.file_field :image%>
-<%= f.submit(:envoyer)%>
+<br><br>
+<div><%= f.submit(:envoyer)%></div>
+
 <%end%>
 
 

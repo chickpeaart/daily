@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127142135) do
+ActiveRecord::Schema.define(version: 20141128142117) do
 
   create_table "artriver_users", force: true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20141127142135) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.boolean  "user_admin"
+    t.boolean  "voted"
   end
 
   create_table "artworks", force: true do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20141127142135) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "position"
   end
 
   add_index "artworks", ["artriver_user_id"], name: "index_artworks_on_user_id", using: :btree

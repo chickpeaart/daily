@@ -9,7 +9,7 @@
 	<tr>
 		<td><%=@artwork.id%></td>
 		<td><%=@artwork.name%></td>
-		<td><%= image_tag @artwork.image.url.to_s%></td>
+		<td><%= image_tag @artwork.image.url(:thumb).to_s%></td>
 		
 	</tr>
 </table>

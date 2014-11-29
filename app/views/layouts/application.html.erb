@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>artriver daily</h1>
-<a href="">login</a>
-<a href="">Join us</a>
+<div>
+
+	<div><img src="./assets/logo-artriver.png"></div>
+
+<%= link_to "Nous rejoindre", :controller => "artriver_users", :action => "new" %><span>&nbsp;</span>
+<%= link_to "Se connecter", :controller => "access", :action => "login" %>
+</div>
+<br>
 
 <%= yield %>
 
