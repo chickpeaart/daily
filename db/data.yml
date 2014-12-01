@@ -9,35 +9,63 @@ artriver_users:
   - created_at
   - updated_at
   - password_digest
+  - user_admin
+  - voted
   records: 
-  - - 6
-    - moi
-    - moi
-    - moi
-    - 2014-11-24 10:57:30.000000000 Z
-    - 2014-11-24 10:57:30.000000000 Z
-    - 
-  - - 7
-    - dzd
-    - dzada
-    - 
-    - 2014-11-24 14:29:57.000000000 Z
-    - 2014-11-24 14:29:57.000000000 Z
-    - $2a$10$Qts5ehFAuoYaHGiNds81/./TlAezlLv/f/Y5Mi5OTpNCSptrg.7He
   - - 8
     - michel
-    - test
+    - moi
     - 
     - 2014-11-24 14:30:32.000000000 Z
     - 2014-11-24 14:30:32.000000000 Z
     - $2a$10$bvCecmHTDPfTf71s7MC8EepG1MWiGHB7VMzXH4Ie05P8F6kznaAJC
-  - - 9
+    - false
+    - false
+  - - 10
+    - chickpea
+    - chickpea.art@gmail.com
+    - 
+    - 2014-11-27 14:48:36.000000000 Z
+    - 2014-11-27 14:48:36.000000000 Z
+    - $2a$10$lJ27MU6m0/9iVmTP5AASdu9coL77TPMYIWLzZjsrTLmXapnWt28rm
+    - true
+    - false
+  - - 11
     - test
     - test
     - 
-    - 2014-11-24 15:32:53.000000000 Z
-    - 2014-11-24 15:32:53.000000000 Z
-    - $2a$10$17kTejM7wawxGqp884LjHeVpr.x8kjZ.LN3kEihDa8bAOKdPp2y6G
+    - 2014-11-27 14:49:42.000000000 Z
+    - 2014-11-27 14:49:42.000000000 Z
+    - $2a$10$ngTX70MsFZrTnErSqLIruOQSaWMMneEZvoRZsWBkqnIlq6fODhjwG
+    - false
+    - false
+  - - 12
+    - arezki
+    - arezki
+    - 
+    - 2014-11-28 08:09:59.000000000 Z
+    - 2014-11-28 08:09:59.000000000 Z
+    - $2a$10$jyWZK5ayFKiI/xMeglk5YOZD2BhmummIy311ibqKOK4K06iZIc8NW
+    - false
+    - false
+  - - 13
+    - dalila
+    - dalila
+    - 
+    - 2014-11-28 09:10:57.000000000 Z
+    - 2014-11-28 14:54:07.000000000 Z
+    - $2a$10$V0fVxvXZR9UwN3d1Olua6.qnKXWx4eZxOCVHJXn.SsCDThcnvMbX.
+    - false
+    - true
+  - - 14
+    - patrick
+    - patrick
+    - 
+    - 2014-11-28 15:13:01.000000000 Z
+    - 2014-11-28 15:53:13.000000000 Z
+    - $2a$10$H/r7Knt0FO1cXypnZDz7N.vTZzvJEAWqNYVyqSUrqQSxPgBSfemDC
+    - false
+    - true
 
 ---
 artworks:
@@ -48,37 +76,49 @@ artworks:
   - subject_id
   - created_at
   - updated_at
+  - image
+  - position
   records: 
-  - - 66
-    - michel
+  - - 107
+    - Isadora
+    - 8
+    - 2
+    - 2014-11-26 16:22:47.000000000 Z
+    - 2014-11-27 12:02:55.000000000 Z
+    - 4f0a2250145c9dfe65f442cb01650c8bda08500a.jpg
     - 1
-    - 
-    - 2014-11-20 11:38:56.000000000 Z
-    - 2014-11-22 22:12:32.000000000 Z
-  - - 67
-    - test2
-    - 
-    - 
-    - 2014-11-20 11:52:17.000000000 Z
-    - 2014-11-20 11:52:17.000000000 Z
-  - - 68
-    - test
-    - 
-    - 
-    - 2014-11-20 11:52:55.000000000 Z
-    - 2014-11-20 11:52:55.000000000 Z
-  - - 69
-    - test
-    - 
-    - 
-    - 2014-11-20 11:53:09.000000000 Z
-    - 2014-11-20 11:53:09.000000000 Z
-  - - 72
-    - test3avec michel
-    - 
-    - 
-    - 2014-11-20 14:48:22.000000000 Z
-    - 2014-11-20 14:48:22.000000000 Z
+  - - 108
+    - parametre de merde
+    - 11
+    - 2
+    - 2014-11-26 16:32:05.000000000 Z
+    - 2014-11-27 12:02:37.000000000 Z
+    - 1ebc25ba38787c97f07bdc05a4cb027d0a8bd734.jpg
+    - 2
+  - - 109
+    - ragnarok
+    - 10
+    - 2
+    - 2014-11-27 12:05:04.000000000 Z
+    - 2014-11-28 15:53:51.000000000 Z
+    - 66824c9c7fe5ac94d6aa3c4b4082c45e804f5a99.jpg
+    - 31
+  - - 110
+    - arezki's artwork
+    - 12
+    - 2
+    - 2014-11-28 08:11:13.000000000 Z
+    - 2014-11-28 14:37:19.000000000 Z
+    - afa7d5a2b80f74ef33aff775d42a5bc82fab1ff6.jpg
+    - 9
+  - - 126
+    - my little artwork
+    - 13
+    - 2
+    - 2014-11-28 11:32:15.000000000 Z
+    - 2014-11-28 15:54:01.000000000 Z
+    - 1ebc25ba38787c97f07bdc05a4cb027d0a8bd734.jpg
+    - 13
 
 ---
 subjects:
@@ -90,12 +130,7 @@ subjects:
   - updated_at
   records: 
   - - 2
-    - aucun
-    - les sujet est grave messieurs
+    - amusez vous
+    - Sujet du 28/11/2014
     - 2014-11-24 11:46:33.000000000 Z
-    - 2014-11-24 11:46:45.000000000 Z
-  - - 4
-    - michel
-    - tatouine
-    - 2014-11-24 12:06:53.000000000 Z
-    - 2014-11-24 12:06:53.000000000 Z
+    - 2014-11-28 09:09:15.000000000 Z
