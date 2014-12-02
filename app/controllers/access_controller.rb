@@ -48,7 +48,7 @@ class AccessController < ApplicationController
 
 	session[:user_name] = nil
 	session[:user_id] = nil
-  	
+  	session[:user_admin] = nil
   	#ajouter la notif 
 
   	redirect_to(:action=>'login')

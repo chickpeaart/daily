@@ -1,5 +1,5 @@
 class ArtriverUsersController < ApplicationController
-  before_action :connected_user, :except =>[:login,:tentative_log,:logout,:new]
+  before_action :connected_user, :except =>[:login,:tentative_log,:logout,:new,:create]
 
   def new
     @user=ArtriverUser.new
@@ -7,13 +7,14 @@ class ArtriverUsersController < ApplicationController
 
 
   def create
+    
     @user=ArtriverUser.new
 
     #cf methode privée autorisation tout en bas
     @user=ArtriverUser.new(autorisation)
 
     if @user.save
-      redirect_to(:action=>'index')
+      redirect_to(:controller => 'public',:action=>'show')
     else
       render('new')
     end
@@ -33,7 +34,7 @@ class ArtriverUsersController < ApplicationController
 
 
   def edit
-@user = ArtriverUser.find(params[:id])
+  @user = ArtriverUser.find(params[:id])
 
   end
   

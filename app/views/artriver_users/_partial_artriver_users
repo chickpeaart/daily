@@ -1,9 +1,27 @@
-<%= f.label :name %>:
-<%=f.text_field(:name)%>
-<br>
-<%= f.label :email %>:
-<%=f.text_field(:email)%>
-<br>
-<%= f.label :password %>:
-<%=f.text_field(:password)%>
-<br>
+<table class="table_artwork">
+
+<tr>
+<td><%= f.label :name %>:</td>
+<td><%=f.text_field(:name)%></td>
+
+</tr>
+
+
+<tr>
+
+<td><%= f.label :email %>:</td>
+<td><%=f.text_field(:email)%></td>
+
+
+</tr>
+
+<tr>
+
+<td><%= f.label :password%>: </td>
+<td><%=f.text_field(:password)%></td>
+
+
+</tr>
+
+
+</table>

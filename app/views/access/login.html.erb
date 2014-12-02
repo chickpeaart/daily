@@ -1,15 +1,14 @@
-<h1>Access#login</h1>
-<p>Find me in app/views/access/login.html.erb</p>
+
 
 <%= form_tag(:action => "tentative_log") do %>
 
 
-<table>
+<table class="table_artwork">
 <tr>
 <td><%=label_tag(:name)%></td>
 <td><%=text_field_tag(:name)%></td>
 <tr>
-<td><%=label_tag(:password)%> </td>
+<td><%=label_tag(:password)%></td>
 <td><%=password_field_tag(:password)%></td>
 </tr>
 <tr>

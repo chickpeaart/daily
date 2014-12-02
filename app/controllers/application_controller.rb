@@ -17,6 +17,8 @@ end
 def already_voted
 
     @user_voted=ArtriverUser.find(session[:user_id])
+    
+=begin
     unless @user_voted.voted == false
       flash[:voted]='Vous avez déja voté'
       redirect_to(:controller => 'public',:action=>'show')
@@ -24,6 +26,20 @@ def already_voted
   	else
   		return true
   	end
+  
+=end
+    
+    if @user_voted.voted == true
+      flash[:voted]='Vous avez déja voté'
+      redirect_to(:controller => 'public',:action=>'show')
+      return true
+    else
+      return false
+    end
+
+
+
+
     end
 
 
